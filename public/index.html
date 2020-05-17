@@ -1,0 +1,158 @@
+<!DOCTYPE html>
+<html>
+<title>The Republica Bank</title>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Inconsolata">
+<style>
+body, html {
+  height: 100%;
+  font-family: "Inconsolata", sans-serif;
+}
+
+.bgimg {
+  background-position: center;
+  background-size: cover;
+  background-image: url("bank.jpg");
+  min-height: 75%;
+}
+
+.menu {
+  display: none;
+}
+</style>
+<body>
+
+<div class="w3-top">
+  <div class="w3-row w3-padding w3-black">
+    <div class="w3-col s3">
+      <a href="https://github.com/rewa15/Customer-Retention-Analysis/blob/master/Customer_retention_analysis.ipynb" class="w3-button w3-block w3-black">MODEL</a>
+    </div>
+    <div class="w3-col s3">
+      <a href="/home" class="w3-button w3-block w3-black">LOGIN</a>
+    </div>
+    <div class="w3-col s3">
+      <a href="/donate" class="w3-button w3-block w3-black">COVID-19 DONATION</a>
+    </div>
+    <div class="w3-col s3">
+      <a href="/covid-form" class="w3-button w3-block w3-black">COVID-19 HOSPITAL FORM</a>
+    </div>
+  </div>
+</div>
+
+<!-- Header with image -->
+<header class="bgimg w3-display-container w3-grayscale-min" id="home">
+  <div class="w3-display-bottomleft w3-center w3-padding-large w3-hide-small">
+    <span class="w3-tag">Banking at your fingertips</span>
+  </div>
+  <div class="w3-display-middle w3-center">
+    <span class="w3-text-white" style="font-size:70px">The Republica Bank</span>
+  </div>
+  <div class="w3-display-bottomright w3-center w3-padding-large">
+    <span class="w3-text-white">323 EAST UPPER WACKER DRIVE, CHICAGO</span>
+  </div>
+</header>
+
+<!-- Add a background color and large text to the whole page -->
+<div class="w3-sand w3-grayscale w3-large">
+
+<!-- About Container -->
+<div class="w3-container" id="about">
+  <div class="w3-content" style="max-width:700px">
+    <h5 class="w3-center w3-padding-64"><span class="w3-tag w3-wide">ABOUT THE BANK</span></h5>
+    <p>The Republica Bank was a retail and commercial bank tracing its roots back to 1863. Over the years, the bank operated under several names including The First National Bank of Chicago and First Chicago NBD (following its 1995 merger with the former National Bank of Detroit). In 1998, The Republica NBD merged with Banc One Corporation to form Bank One Corporation, today a part of Chase.</p>
+    <div class="w3-panel w3-leftbar w3-light-grey">
+      <p><i>“Banking technology has made it simple and efficient to invest in good causes.”</i></p>
+      <p>Banker: Liam Brown</p>
+    </div>
+    <img src="logo.png" style="width:100%;max-width:1000px" class="w3-margin-top">
+    <p><strong>Opening hours:</strong> everyday from 10am to 5pm.</p>
+    <p><strong>Address:</strong> 323 EAST UPPER WACKER DRIVE, CHICAGO</p>
+  </div>
+</div>
+
+<!-- Menu Container -->
+<div class="w3-container" id="menu">
+  <div class="w3-content" style="max-width:700px">
+ 
+    <h5 class="w3-center w3-padding-48"><span class="w3-tag w3-wide">SERVICES WE PROVIDE</span></h5>
+  
+    <div class="w3-row w3-center w3-card w3-padding">
+      <a href="javascript:void(0)" onclick="openMenu(event, 'Eat');" id="myLink">
+        <div class="w3-col s6 tablink">Banking</div>
+      </a>
+      <a href="javascript:void(0)" onclick="openMenu(event, 'Drinks');">
+        <div class="w3-col s6 tablink">Loans</div>
+      </a>
+    </div>
+
+    <div id="Eat" class="w3-container menu w3-padding-48 w3-card">
+      <h5>Mini Statement</h5>
+      <p class="w3-text-grey">Statement of your bank balance transactions</p><br>
+    
+      <h5>Personalized login</h5>
+      <p class="w3-text-grey">Login safely with your credentials</p><br>
+    
+      <h5>Fund Transfer</h5>
+      <p class="w3-text-grey">Transfer funds using a single click over internet</p><br>
+    </div>
+
+    <div id="Drinks" class="w3-container menu w3-padding-48 w3-card">
+      <h5>Business Loan</h5>
+      <p class="w3-text-grey">We provide you loans, help you start a business</p><br>
+    
+      <h5>Education loan</h5>
+      <p class="w3-text-grey">Want to study at Harvard? We'll help you.</p><br>
+    
+      <h5>Student loan</h5>
+      <p class="w3-text-grey">We offer limited loans to students too!</p><br>
+    </div>  
+  </div>
+</div>
+
+<!-- Contact/Area Container -->
+<div class="w3-container" id="where" style="padding-bottom:32px;">
+  <div class="w3-content" style="max-width:700px">
+    <h5 class="w3-center w3-padding-48"><span class="w3-tag w3-wide">WHERE TO FIND US</span></h5>
+    <p>Find us at some address at some place.</p>
+    <p><span class="w3-tag">FYI!</span> Our Headquaters are located at Chicago, USA.</p>
+    <p><strong>Open</strong> a bank account at Republica, ask for any queries:</p>
+    <form action="/action_page.php" target="_blank">
+      <p><input class="w3-input w3-padding-16 w3-border" type="text" placeholder="Name" required name="Name"></p>
+      <p><input class="w3-input w3-padding-16 w3-border" type="text" placeholder="Profession" required name="People"></p>
+      <p><input class="w3-input w3-padding-16 w3-border" type="datetime-local" placeholder="Date and time" required name="date" value="2017-11-16T20:00"></p>
+      <p><input class="w3-input w3-padding-16 w3-border" type="text" placeholder="Type Of Account" required name="Message"></p>
+      <p><button class="w3-button w3-black" type="submit">SEND MESSAGE</button></p>
+    </form>
+  </div>
+</div>
+
+<!-- End page content -->
+</div>
+
+<!-- Footer -->
+<footer class="w3-center w3-light-grey w3-padding-48 w3-large">
+  <p>Made with ❤️ by <a href="https://github.com/rewa15" title="W3.CSS" target="_blank" class="w3-hover-text-green">Rewa Kawatra</a></p>
+</footer>
+
+<script>
+// Tabbed Menu
+function openMenu(evt, menuName) {
+  var i, x, tablinks;
+  x = document.getElementsByClassName("menu");
+  for (i = 0; i < x.length; i++) {
+    x[i].style.display = "none";
+  }
+  tablinks = document.getElementsByClassName("tablink");
+  for (i = 0; i < x.length; i++) {
+    tablinks[i].className = tablinks[i].className.replace(" w3-dark-grey", "");
+  }
+  document.getElementById(menuName).style.display = "block";
+  evt.currentTarget.firstElementChild.className += " w3-dark-grey";
+}
+document.getElementById("myLink").click();
+</script>
+
+</body>
+</html>

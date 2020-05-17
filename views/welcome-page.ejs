@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <title>Welcome Page</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+</head>
+<body>
+
+<div class="jumbotron jumbotron-fluid">
+  <div class="container">
+    <h1 class="display-4">Welcome User</h1>
+    <p class="lead">Successfully Logged in with your google account.</p>
+    <form action="/welcome-login" method="post">
+    <input hidden type="text" name="user" value= "<%= user %>" >
+    <input hidden type="text" name="result" value= "<%= result %>" >
+    <input type="submit" value="ENTER DASHBOARD">
+    </form>
+  </div>
+</div>
+
+<% if (!result) { %>
+<%- include("register-page.ejs", {user: user}); %>
+<% } %> 
+
+</body>
+</html>

@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html>
+    <head>
+       <title>Login</title>
+       <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+    </head>
+
+<body>
+
+<h2>Please fill in the GoogleId column with: <%= user %></h2>
+
+<form method="post" action="/login-form">
+  <div class="form-group">
+    <label for="id">Google Id</label>
+    <input type="text" class="form-control" name="googleId">
+  </div>
+  <div class="form-group">
+    <label for="exampleInputEmail1">Email address</label>
+    <input type="email" class="form-control" name="email" aria-describedby="emailHelp">
+    <small id="emailHelp" class="form-text text-muted">We'll never share your email with anyone else.</small>
+  </div>
+  <div class="form-group">
+    <label for="id">Password</label>
+    <input type="password" class="form-control" name="password">
+  </div>
+  <div class="form-group">
+    <label for="annualIncome">Annual Income</label>
+    <input type="number" class="form-control" name="income">
+  </div>
+  <div class="form-group">
+    <label for="accountType">Account Type</label>
+    <input type="text" class="form-control" name="account">
+  </div>
+  <div class="form-group">
+    <label for="balance">Account Balance</label>
+    <input type="number" class="form-control" name="balance">
+  </div>
+  <div class="form-group">
+    <label for="accountType">Account No</label>
+    <input type="text" class="form-control" name="accountNo">
+  </div>
+  <div class="form-group">
+    <label for="accountType">State</label>
+    <input type="text" class="form-control" name="state">
+  </div>
+  <div class="form-group">
+    <label for="accountType">Contact</label>
+    <input type="text" class="form-control" name="contact">
+  </div>
+  <div class="form-group">
+    <label for="accountType">Account PIN</label>
+    <input type="text" class="form-control" name="pin">
+  </div>
+  <button type="submit" class="btn btn-primary">Submit</button>
+</form>
+
+</body>
+</html>

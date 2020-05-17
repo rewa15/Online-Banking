@@ -1,0 +1,164 @@
+<!Doctype html>
+<html>
+<head>
+<link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css">
+<link href='https://fonts.googleapis.com/css?family=Droid+Serif:400,700' rel='stylesheet' type='text/css'>
+<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css" integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk" crossorigin="anonymous">
+
+<script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js" integrity="sha384-OgVRvuATP1z7JjHLkuOU7Xw704+h835Lr+6QL9UvYjZE3Ipu6Tp75j7Bh/kR0JKI" crossorigin="anonymous"></script>
+<style>
+    
+  
+@button-colour: #009ED8;
+@button-text: #ffffff;
+@regular-text: #333;
+@button-tint: fadeout(#000, 90%);
+@background: #303036;
+
+body {
+    background-color: lightgrey;
+    background: @background;
+    text-align: center;
+    text-rendering: auto;
+    font-size: 17px;
+    line-height: 1.6em;
+    height: 100vh;
+    overflow: hidden;
+    padding: 18%;
+    padding-top: 25vh; 
+}
+
+* {
+    box-sizing: border-box;
+}
+
+.button {
+    display: inline-block;
+    font-family: "Montserrat", "Trebuchet MS", Helvetica, sans-serif;
+    -webkit-font-smoothing: antialiased;
+    position: relative;
+    padding: .8em 1.4em;
+    padding-right: 4.7em;
+    background: @button-colour;
+    border: none;
+    color: white;
+    transition: .2s;
+    &:before,
+    &:after {
+        position: absolute;
+        top: 0;
+        bottom: 0;
+        right: 0;
+        padding-top: inherit;
+        padding-bottom: inherit;
+        width: 2.8em;
+        content: "\00a0";
+        font-family: 'FontAwesome', sans-serif;
+        font-size: 1.2em;
+        text-align: center;
+        
+        transition: .2s;
+        transform-origin: 50% 60%;
+    }
+    &:before {
+        background: @button-tint;
+    }
+    &:hover {
+        background: darken(@button-colour, 10%);
+    }
+    &:active,
+    &:focus {
+        background: darken(@button-colour, 30%);
+        outline: none;
+    }
+}
+
+.button {
+    min-width: 50em;
+}
+
+
+
+.email {
+    background: #C673B3;
+    &:hover {
+        background: darken(#C673B3, 10%);
+    }
+    &:active,
+    &:focus {
+        background: darken(#C673B3, 20%);
+    }
+    &:after {
+        content: "\F0E0";
+    }
+    &:hover:after {
+        -webkit-animation: none;
+        -webkit-transform: skew(-20deg);
+        animation: none;
+        transform: skew(-20deg);
+        text-indent: .1em;
+    }
+}
+
+.search {
+    &:after {
+        content:"\f002";
+    }
+    &:hover:after {
+        -webkit-animation: none;
+        -webkit-transform: scale(1.4);
+        animation: none;
+        transform: scale(1.4);
+    }
+}
+
+
+@-webkit-keyframes bounceright {
+    from { -webkit-transform: translateX(0); }
+    to   { -webkit-transform: translateX(3px); }
+}
+
+@-webkit-keyframes wiggle {
+    from { -webkit-transform: rotate(0deg); }
+    to   { -webkit-transform: rotate(30deg); }
+}
+
+@keyframes bounceright {
+    from { transform: translateX(0); }
+    to   { transform: translateX(3px); }
+}
+
+@keyframes wiggle {
+    from { transform: rotate(0deg); }
+    to   { transform: rotate(30deg); }
+}
+
+</style>
+
+
+</head>
+<body>
+<h1 align="center">Welcome To Republica Bank Home Page</h1><br><br>
+<h1 align="center">🏛</h1><br><br>
+
+
+<% if (user) { %>
+
+<form action="/auth/logout" method="GET">
+    <button class="button  email" type="submit">LOG OUT</button>
+</form>
+<br/><br/>
+
+<% } else { %>
+
+<form action="/auth/login" method="GET">
+    <button class="button  email" type="submit">LOGIN TO NET BANKING</button>
+</form>
+
+<br/><br/>
+ <% } %>
+
+</body>
+</html>
