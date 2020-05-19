@@ -364,6 +364,3 @@ app.listen(3000, () => {
     console.log('App now listening for requests on port 3000');
 });
 
-
-
-// Google+ API Key: AIzaSyB9_C37zGlRaq7GJTTrh06KtH2uftWJPCY
